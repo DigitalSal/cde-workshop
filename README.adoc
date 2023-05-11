@@ -29,7 +29,7 @@ Cloudera Data Engineering allows you to create, manage, and schedule Apache Spar
 
 The CDE Service can be reached from the CDP Home Page by clicking on the blue "Data Engineering" icon.
 
-![alt text](../img/cdp_lp_0.png)
+image:/img/cdp_lp_0.png[] +
 
 The CDE Landing Page allows you to access, create and manage CDE Virtual Clusters. Within each CDE Virtual Cluster you can  create, monitor and troubleshoot Spark and Airflow Jobs.
 
@@ -61,11 +61,11 @@ Now that you have covered the basics of CDE, spend a few moments familiarizing y
 
 The Home Page provides a high level overview of all CDE Services and Clusters. At the top, you have shortcuts to creating CDE Jobs and Resources. Scroll down to the CDE Virtual Clusters section and notice that all Virtual Clusters and each associated CDP Environment / CDE Service are shown.
 
-![alt text](../img/cde_lp_1.png)
+image:/img/cde_lp_1.png[] +
 
 Next, open the Administration page on the left tab. This page also shows CDE Services on the left and associated Virtual Clusters on the right.
 
-![alt text](../img/cde_service_1.png)
+image:/img/cde_service_1.png[] +
 
 Open the CDE Service Details page and notice the following key information and links:
 
@@ -75,17 +75,17 @@ Open the CDE Service Details page and notice the following key information and l
 * Graphana Charts. Click on this link to obtain a dashboard of running Service Kubernetes resources.
 * Resource Scheduler. Click on this link to view the Yunikorn Web UI.
 
-![alt text](../img/cde_service_2.png)
+image:/img/cde_service_2.png[] +
 
 Scroll down and open the Configurations tab. Notice that this is where Instance Types and Instance Autoscale ranges are defined.
 
-![alt text](../img/cde_service_3a.png)
+image:/img/cde_service_3a.png[] +
 
 To learn more about other important service configurations please visit [Enabling a CDE Service](https://docs.cloudera.com/data-engineering/cloud/enable-data-engineering/topics/cde-enable-data-engineering.html) in the CDE Documentation.
 
 Navigate back to the Administration page and open a Virtual Cluster's Cluster Details page.
 
-![alt text](../img/cde_lp_2.png)
+image:/img/cde_lp_2.png[] +
 
 This view includes other important cluster management information. From here you can:
 
@@ -95,7 +95,7 @@ This view includes other important cluster management information. From here you
 
 Open the Configuration tab. Notice that CPU and Memory autoscale ranges, Spark version, and Iceberg options are set here.
 
-![alt text](../img/cde_lp_3.png)
+image:/img/cde_lp_3.png[] +
 
 To learn more about CDE Architecture please visit [Creating and Managing Virtual Clusters](https://docs.cloudera.com/data-engineering/cloud/manage-clusters/topics/cde-create-cluster.html) and [Recommendations for Scaling CDE Deployments](https://docs.cloudera.com/data-engineering/cloud/deployment-architecture/topics/cde-general-scaling.html)
 
@@ -138,11 +138,11 @@ CDE Resources can be of type "File", "Python", or "Custom Runtime". You will sta
 
 To create a File Resource, from the CDE Home Page click on "Create New" in the "Resources" -> "File" section.
 
-![alt text](../img/cde_res_1.png)
+image:/img/cde_res_1.png[] +
 
 Pick your Spark 3 / Iceberg-enabled CDE Virtual Cluster and name your Resource after your username or a unique ID.
 
-![alt text](../img/cde_res_2.png)
+image:/img/cde_res_2.png[] +
 
 Upload all files from the "cde_ace_hol/cde_spark_jobs" folder. Then, navigate back to the Resources tab, reopen the resource and upload the two Airflow DAGs located in the "cde_ace_hol/cde_airflow_jobs" folders. Finally, reopen the resource and upload the "utils.py" file contained in the "cde_ace_hol/resources_files" folder.
 
@@ -167,21 +167,21 @@ utils.py
 
 To create a Python Resource, navigate back to the CDE Home Page and click on "Create New" in the "Resources" -> "Python" section.
 
-![alt text](../img/cde_res_4.png)
+image:/img/cde_res_4.png[] +
 
 Ensure to select the same CDE Virtual Cluster. Name the Python CDE Resource and leave the pipy mirror field blank.
 
-![alt text](../img/cde_res_5.png)
+image:/img/cde_res_5.png[] +
 
 Upload the "requirements.txt" file provided in the "cde_ace_hol/resources_files" folder.
 
-![alt text](../img/cde_res_6.png)
+image:/img/cde_res_6.png[] +
 
 Notice the CDE Resource is now building the Python Virtual Environment. After a few moments the build will complete and you will be able to validate the libraries used.
 
-![alt text](../img/cde_res_7.png)
+image:/img/cde_res_7.png[] +
 
-![alt text](../img/cde_res_8.png)
+image:/img/cde_res_8.png[] +
 
 To learn more about CDE Resources please visit [Using CDE Resources](https://docs.cloudera.com/data-engineering/cloud/use-resources/topics/cde-python-virtual-env.html) in the CDE Documentation.
 
@@ -191,47 +191,47 @@ Next we will create four CDE Jobs of type Spark using scripts "01_Pre_Setup.py",
 
 Navigate back to the CDE Home Page. Click on "Create New" in the "Jobs" -> "Spark" section.
 
-![alt text](../img/cde_jobs_1.png)
+image:/img/cde_jobs_1.png[] +
 
 Select your CDE Virtual Cluster and assign "O1_Setup" as the Job Name.
 
-![alt text](../img/cde_jobs_2.png)
+image:/img/cde_jobs_2.png[] +
 
 Scroll down; ensure to select "File" from the radio button and click on "Select from Resource" in the "Application File" section. A window will open with the contents loaded in your File Resource. Select script "01_Pre_Setup.py".
 
-![alt text](../img/cde_jobs_3.png)
+image:/img/cde_jobs_3.png[] +
 
-![alt text](../img/cde_jobs_4.png)
+image:/img/cde_jobs_4.png[] +
 
 Scroll down again to the "Resources" section and notice that your File Resource has been mapped to the Job by default. This allows the PySpark script to load modules in the same Resource such as the ones contained in the "utils.py" file.
 
 Scroll to the bottom and click on the "Create and Run" blue icon.
 
-![alt text](../img/cde_jobs_5.png)
+image:/img/cde_jobs_5.png[] +
 
 You will be automatically taken to the Jobs tab where the Job will now be listed at the top. Open the Job Runs tab on the left pane and validate that the CDE Spark Job is executing.
 
-![alt text](../img/cde_jobs_6.png)
+image:/img/cde_jobs_6.png[] +
 
-![alt text](../img/cde_jobs_7.png)
+image:/img/cde_jobs_7.png[] +
 
 When complete, a green checkmark will appear on the left side. Click on the Job Run number to explore further.
 
-![alt text](../img/cde_jobs_8.png)
+image:/img/cde_jobs_8.png[] +
 
 The Job Run is populated with Metadata, Logs, and the Spark UI. This information is persisted and can be referenced at a later point in time.
 
 The Configuration tab allows you to verify the script and resources used by the CDE Spark Job.
 
-![alt text](../img/cde_jobs_8a.png)
+image:/img/cde_jobs_8a.png[] +
 
 The Logs tab contains rich logging information. For example, you can verify your code output under "Logs" -> "Driver" -> "StdOut".
 
-![alt text](../img/cde_jobs_9.png)
+image:/img/cde_jobs_9.png[] +
 
 The Spark UI allows you to visualize resources, optimize performance and troubleshoot your Spark Jobs.
 
-![alt text](../img/cde_jobs_10.png)
+image:/img/cde_jobs_10.png[] +
 
 Now that you have learned how to create a CDE Spark Job with the CDE UI, repeat the same process with the following scripts and settings. Leave all other options to their default. Allow each job to complete before creating and executing a new one.
 
@@ -529,17 +529,17 @@ The CDE CLI provides a similar although not identical way of running "spark-subm
 
 Navigate to the CDP Management Console and download your user credentials file. The credentials file includes a CDP Access Key ID and a CDP Private Key.
 
-![alt text](../img/mgt_console1.png)
+image:/img/mgt_console1.png[] +
 
-![alt text](../img/mgt_console2.png)
+image:/img/mgt_console2.png[] +
 
-![alt text](../img/mgt_console3.png)
+image:/img/mgt_console3.png[] +
 
-![alt text](../img/mgt_console4.png)
+image:/img/mgt_console4.png[] +
 
 Next, navigate to the CDE Virtual Cluster Details and copy the JOBS_API_URL.
 
-![alt text](../img/jobsapiurl.png)
+image:/img/jobsapiurl.png[] +
 
 Launch the example Docker container.
 
@@ -575,11 +575,11 @@ spark-submit \
 
 Shortly you should get output in your terminal including a Job Run ID confirming successful job submission to CDE. In the screenshot example below the Job Run ID is 9.
 
-![alt text](../img/job_submit_confirm1.png)
+image:/img/job_submit_confirm1.png[] +
 
 Navigate to your CDE Virtual Cluster Job Runs page and validate the job is running or has run successfully.
 
-![alt text](../img/job_submit_confirm3.png)
+image:/img/job_submit_confirm3.png[] +
 
 >**⚠ Warning**  
 >If you are unable to run the spark-submit you may have to remove the tls setting from config.yaml. In other words, completely erase line 4.
@@ -604,7 +604,7 @@ CDE currently supports CDW operations for ETL workloads in Apache Hive virtual w
 
 Navigate to the Cloudera Data Warehouse Overview page by clicking the Data Warehouse tile in the Cloudera Data Platform (CDP) management console.
 
-![alt text](../img/bonus1_step00_A.png)
+image:/img/bonus1_step00_A.png[] +
 
 In the Virtual Warehouses column, find the warehouse you want to connect to.
 
