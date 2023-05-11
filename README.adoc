@@ -254,14 +254,14 @@ Application File: 04_Sales_Report.py
 Job Resource(s): cde_hol_files
 ```
 
->**Note**  
->Your credentials are stored in parameters.conf
+**Note** +
+Your credentials are stored in parameters.conf
 
->**Note**  
->The Iceberg Jars did not have to be loaded in the Spark Configurations. Iceberg is enabled at the Virtual Cluster level.
+**Note** + 
+The Iceberg Jars did not have to be loaded in the Spark Configurations. Iceberg is enabled at the Virtual Cluster level.
 
->**Note**  
->Job 04_Sales_Report uses the Quinn Python library. The methods are implemented in utils.py which is loaded via the File Resource.   
+**Note** +
+Job 04_Sales_Report uses the Quinn Python library. The methods are implemented in utils.py which is loaded via the File Resource.   
 
 To learn more about Iceberg in CDE please visit https://docs.cloudera.com/data-engineering/cloud/manage-jobs/topics/cde-using-iceberg.html[Using Apache Iceberg in Cloudera Data Engineering].
 
@@ -304,11 +304,11 @@ The "username" variable is read at line 64 to create a dag_name variable which i
 
 Finally, modify lines 60 and 61 to assign a start and end date that takes place in the future.
 
->**⚠ Warning**  
->CDE requires a unique DAG name for each CDE Airflow Job or will otherwise return an error upon job creation.
+**⚠ Warning** +
+CDE requires a unique DAG name for each CDE Airflow Job or will otherwise return an error upon job creation.
 
->**⚠ Warning**   
-> If you don't edit the start and end date, the CDE Airflow Job might fail. The Start Date parameter must reflect a date in the past while the End Date must be in the future. If you are getting two identical Airflow Job runs you have set both dates in the past.  
+**⚠ Warning** +
+If you don't edit the start and end date, the CDE Airflow Job might fail. The Start Date parameter must reflect a date in the past while the End Date must be in the future. If you are getting two identical Airflow Job runs you have set both dates in the past.  
 
 Upload the updated script to your CDE Files Resource. Then navigate back to the CDE Home Page and create a new CDE Job of type Airflow.
 
@@ -377,14 +377,14 @@ Then, open "07-Airflow-Logic-DAG.py" in your editor and update your username at 
 
 Finally, reupload the script to your CDE Files Resource. Create a new CDE Job of type Airflow and select the script from your CDE Resource.
 
->**Note**
->The SimpleHttpOperator Operator can be used to interact with 3rd party systems and exchange data to and from a CDE Airflow Job run. For example you could trigger the execution of jobs outside CDP or execute CDE Airflow DAG logic based on inputs from 3rd party systems.
+**Note** +
+The SimpleHttpOperator Operator can be used to interact with 3rd party systems and exchange data to and from a CDE Airflow Job run. For example you could trigger the execution of jobs outside CDP or execute CDE Airflow DAG logic based on inputs from 3rd party systems.
 
->**Note**  
->You can use CDE Airflow to orchestrate SQL queries in CDW, the Cloudera Data Warehouse Data Service, with the Cloudera-supported  CDWOperator. If you want to learn more, please go to https://github.com/pdefusco/CDE_Tour_ACE_HOL/blob/main/step_by_step_guides/english.md#bonus-lab-1-using-cde-airflow-with-cdw[Bonus Lab 1: Using CDE Airflow with CDW].
+**Note** +
+You can use CDE Airflow to orchestrate SQL queries in CDW, the Cloudera Data Warehouse Data Service, with the Cloudera-supported  CDWOperator. If you want to learn more, please go to https://github.com/pdefusco/CDE_Tour_ACE_HOL/blob/main/step_by_step_guides/english.md#bonus-lab-1-using-cde-airflow-with-cdw[Bonus Lab 1: Using CDE Airflow with CDW].
 
->**Note**  
->Additionally, other operators including Python, HTTP, and Bash are available in CDE. If you want to learn more about Airflow in CDE, please reference https://github.com/pdefusco/Using_CDE_Airflow[Using CDE Airflow].
+**Note** + 
+Additionally, other operators including Python, HTTP, and Bash are available in CDE. If you want to learn more about Airflow in CDE, please reference https://github.com/pdefusco/Using_CDE_Airflow[Using CDE Airflow].
 
 To learn more about CDE Airflow please visit https://docs.cloudera.com/data-engineering/cloud/orchestrate-workflows/topics/cde-airflow-editor.html[Orchestrating Workflows and Pipelines] in the CDE Documentation.
 
@@ -407,8 +407,8 @@ You can download the CDE CLI to your local machine following the instructions pr
 
 Alternatively, you can use the "00_cde_cli_install.py" automation script located in the "cde_cli_jobs" folder. This will install the CDE CLI in your local machine if you have a Mac.
 
->**⚠ Warning**  
-> The Automated CLI Installation script is not supported by Cloudera. It is just a utility which may not be compatible with your laptop settings. If you are having trouble using this script please follow the documentation to install the CLI Manually.
+**⚠ Warning** +
+The Automated CLI Installation script is not supported by Cloudera. It is just a utility which may not be compatible with your laptop settings. If you are having trouble using this script please follow the documentation to install the CLI Manually.
 
 In order to use the automated installation script, please follow the steps below.
 
@@ -437,8 +437,8 @@ python cde_cli_jobs/00_cde_cli_install.py JOBS_API_URL CDP_WORKLOAD_USER
 
 This command will run the script as a simple Spark Submit. This is slightly different from creating a CDE Job of type Spark as the Job definition will not become reusable.
 
->**⚠ Warning**  
-> The CLI commands below are meant to be copy/pasted in your terminal as-is and run from the "cde_tour_ace_hol" directory. However, you may have to update the script path in each command if you're running these from a different folder.
+**⚠ Warning** +
+The CLI commands below are meant to be copy/pasted in your terminal as-is and run from the "cde_tour_ace_hol" directory. However, you may have to update the script path in each command if you're running these from a different folder.
 
 ```
 cde spark submit --conf "spark.pyspark.python=python3" cde_cli_jobs/01_pyspark-sql.py
@@ -522,11 +522,11 @@ The CDE CLI provides a similar although not identical way of running "spark-subm
 
 #### Step By Step Instructions
 
->**⚠ Warning**  
->The Spark Submit Migration tool requires having the CDE CLI installed on your machine. Please ensure you have completed the installation steps in Part 3.
+**⚠ Warning** +
+The Spark Submit Migration tool requires having the CDE CLI installed on your machine. Please ensure you have completed the installation steps in Part 3.
 
->**⚠ Warning**  
->This tutorial utilizes Docker to streamline the installation process of the Spark Submit Migration tool. If you don't have Docker installed on your machine you will have to go through https://github.com/SuperEllipse/cde-spark-submit-migration[this tutorial by Vish Rajagopalan] instead.
+**⚠ Warning** +
+This tutorial utilizes Docker to streamline the installation process of the Spark Submit Migration tool. If you don't have Docker installed on your machine you will have to go through https://github.com/SuperEllipse/cde-spark-submit-migration[this tutorial by Vish Rajagopalan] instead.
 
 Navigate to the CDP Management Console and download your user credentials file. The credentials file includes a CDP Access Key ID and a CDP Private Key.
 
@@ -582,8 +582,8 @@ Navigate to your CDE Virtual Cluster Job Runs page and validate the job is runni
 
 image:/img/job_submit_confirm3.png[] +
 
->**⚠ Warning**  
->If you are unable to run the spark-submit you may have to remove the tls setting from config.yaml. In other words, completely erase line 4.
+**⚠ Warning** +
+If you are unable to run the spark-submit you may have to remove the tls setting from config.yaml. In other words, completely erase line 4.
 
 
 ## Bonus Labs
