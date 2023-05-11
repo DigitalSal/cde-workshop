@@ -15,9 +15,9 @@ In order to execute the Hands On Labs you need:
 Clone this GitHub repository to your local machine or the VM where you will be running the script.
 
 ```
-mkdir ~/Documents/cde_ace_hol
-cd ~/Documents/cde_ace_hol
-git clone https://github.com/pdefusco/CDE_Tour_ACE_HOL.git
+mkdir ~/Documents/cde-workshop
+cd ~/Documents/cde-workshop
+git clone https://github.com/DigitalSal/cde-workshop.git
 ```
 
 Alternatively, if you don't have `git` installed on your machine, create a folder on your local computer; navigate to https://github.com/pdefusco/CDE_Tour_ACE_HOL.git[this URL] and manually download the files.
