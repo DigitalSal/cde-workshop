@@ -311,23 +311,23 @@ Finally, modify lines 60 and 61 to assign a start and end date that takes place 
 
 Upload the updated script to your CDE Files Resource. Then navigate back to the CDE Home Page and create a new CDE Job of type Airflow.
 
-![alt text](../img/cde_airflow_1.png)
+image:/img/cde_airflow_1.png[] +
 
 As before, select your Virtual Cluster and Job name. Then create and execute.
 
-![alt text](../img/cde_airflow_2.png)
+image:/img/cde_airflow_2.png[] +
 
-![alt text](../img/cde_airflow_3.png)
+image:/img/cde_airflow_3.png[] +
 
 Navigate to the Job Runs tab and notice that the Airflow DAG is running. While in progress, navigate back to the CDE Home Page, scroll down to the Virtual Clusters section and open the Virtual Cluster Details. Then, open the Airflow UI.
 
-![alt text](../img/cde_airflow_4.png)
+image:/img/cde_airflow_4.png[] +
 
 Familiarize yourself with the Airflow UI. Then, open the Dag Runs page and validate the CDE Airflow Job's execution.
 
-![alt text](../img/cde_airflow_5.png)
+image:/img/cde_airflow_5.png[] +
 
-![alt text](../img/cde_airflow_6.png)
+image:/img/cde_airflow_6.png[] +
 
 ##### Executing Airflow Logic Dag
 
@@ -337,17 +337,17 @@ Using "07-Airflow-Logic-DAG.py" you will create a new CDE Airflow Job with other
 
 In order to use it, first you have to set up a Connection to the endpoint referenced at line 110 in the DAG. Navigate back to the CDE Administration tab, open your Virtual Cluster's "Cluster Details" and then click on the "Airflow" icon to reach the Airflow UI.
 
-![alt text](../img/airflow_connection_0.png)
+image:/img/airflow_connection_0.png[] +
 
-![alt text](../img/airflow_connection_1.png)
+image:/img/airflow_connection_1.png[] +
 
 Open Airflow Connections under the Admin dropdown as shown below.
 
-![alt text](../img/airflow_connection_2.png)
+image:/img/airflow_connection_2.png[] +
 
 Airflow Connections allow you to predefine connection configurations so that they can be referenced within a DAG for various purposes. In our case, we will create a new connection to access the "Random Joke API" and in particular the "Programming" endpoint.
 
-![alt text](../img/airflow_connection_3.png)
+image:/img/airflow_connection_3.png[] +
 
 Fill out the following fields as shown below and save.
 
@@ -357,7 +357,7 @@ Connection Type: HTTP
 Host: https://official-joke-api.appspot.com/
 ```
 
-![alt text](../img/airflow_connection_4.png)
+image:/img/airflow_connection_4.png[] +
 
 Now open "07-Airflow-Logic-DAG.py" and familiarize yourself with the code. Some of the most notable aspects of this DAG include:
 
@@ -608,11 +608,11 @@ image:/img/bonus1_step00_A.png[] +
 
 In the Virtual Warehouses column, find the warehouse you want to connect to.
 
-![alt text](../img/bonus1_step00_B.png)
+image:/img/bonus1_step00_B.png[] +
 
 Click the three-dot menu for the selected warehouse, and then click Copy JDBC URL.
 
-![alt text](../img/bonus1_step00_C.png)
+image:/img/bonus1_step00_C.png[] +
 
 Paste the URL into a text editor, and make note of the hostname. For example, starting with the following url the hostname would be:
 
@@ -628,11 +628,11 @@ Navigate to the Cloudera Data Engineering Overview page by clicking the Data Eng
 
 In the CDE Services column, select the service containing the virtual cluster you are using, and then in the Virtual Clusters column, click  Cluster Details for the virtual cluster. Click AIRFLOW UI.
 
-![alt text](../img/bonus1_step00_D.png)
+image:/img/bonus1_step00_D.png[] +
 
 From the Airflow UI, click the Connection link from the Admin tab.
 
-![alt text](../img/bonus1_step00_E.png)
+image:/img/bonus1_step00_E.png[] +
 
 Click the plus sign to add a new record, and then fill in the fields:
 
@@ -644,7 +644,7 @@ Click the plus sign to add a new record, and then fill in the fields:
 
 6. Click Save.
 
-![alt text](../img/bonus1_step1.png)
+image:/img/bonus1_step1.png[] +
 
 ##### Editing the DAG Python file
 
@@ -684,11 +684,11 @@ spark_step >> dw_step
 
 Next, create a new Airflow CDE Job named "CDW Dag". Upload the new DAG file to the same or a new CDE resource as part of the creation process.
 
-![alt text](../img/bonus1_step2.png)
+image:/img/bonus1_step2.png)
 
 Navigate to the CDE Job Runs Page and open the run's Airflow UI. Then open the Tree View and validate that the job has succeeded.
 
-![alt text](../img/bonus1_step3.png)
+image:/img/bonus1_step3.png[] +
 
 
 ### Bonus Lab 2: Using the CDE Airflow Editor to Build Airflow DAGs without Coding
@@ -697,37 +697,37 @@ You can use the CDE Airflow Editor to build DAGs without writing code. This is a
 
 From the CDE Jobs UI, create a new CDE Job of type Airflow as shown below. Ensure to select the "Editor" option. Then click create.
 
-![alt text](../img/bonus2_step00.png)
+image:/img/bonus2_step00.png[] +
 
 From the Editor Canvas drag and drop the Shell Script action. This is equivalent to instantiating the BashOperator. Click on the icon on the canvas and an option window will appear on the right side. Enter the "dag start" in the Bash Command section.
 
-![alt text](../img/bonus2_step01.png)
+image:/img/bonus2_step01.png[] +
 
 From the Canvas, drop two CDE Job Actions. Configure them with Job Name "sql_job". You already created this CDE Spark Job in part 2.
 
-![alt text](../img/bonus2_step02.png)
+image:/img/bonus2_step02.png[] +
 
 Next, drag and drop a Python action. In the code section, add *print("DAG Terminated")* as shown below.
 
-![alt text](../img/bonus2_step03.png)
+image:/img/bonus2_step03.png[] +
 
 Finally, complete the DAG by connecting each action.
 
-![alt text](../img/bonus2_step04.png)
+image:/img/bonus2_step04.png[] +
 
 For each of the two CDE Jobs, open the action by clicking on the icon on the canvas. Select "Depends on Past" and then "all_success" in the "Trigger Rule" section.
 
-![alt text](../img/bonus2_step05.png)
+image:/img/bonus2_step05.png[] +
 
 Execute the DAG and observe it from the CDE Job Runs UI.
 
-![alt text](../img/bonus2_step06.png)
+image:/img/bonus2_step06.png[] +
 
-![alt text](../img/bonus2_step07.png)
+image:/img/bonus2_step07.png[] +
 
 
 ### Conclusion
 
 Congratulations for making it to the end of this tutorial! We hope you enjoyed using CDE first hand. We recommend visiting the [Next Steps Section](https://github.com/pdefusco/CDE_Tour_ACE_HOL#next-steps) to continue your journey with CDE.
 
-![alt text](../img/cde_thankyou.png)
+image:/img/cde_thankyou.png[] +
