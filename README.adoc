@@ -3,6 +3,7 @@
 ## Requirements
 
 In order to execute the Hands On Labs you need:
+
 * A Spark 3 and Iceberg-enabled CDE Virtual Cluster (Azure, AWS and Private Cloud ok).
 * No script code changes are required other than entering your Storage Bucket and Credentials at the top of each script.
 * Familiarity with Python and PySpark is highly recommended.
@@ -19,7 +20,7 @@ cd ~/Documents/cde_ace_hol
 git clone https://github.com/pdefusco/CDE_Tour_ACE_HOL.git
 ```
 
-Alternatively, if you don't have `git` installed on your machine, create a folder on your local computer; navigate to [this URL](https://github.com/pdefusco/CDE_Tour_ACE_HOL.git) and manually download the files.
+Alternatively, if you don't have `git` installed on your machine, create a folder on your local computer; navigate to https://github.com/pdefusco/CDE_Tour_ACE_HOL.git[this URL] and manually download the files.
 
 ## Introduction to the CDE Data Service
 
@@ -38,7 +39,7 @@ The Virtual Cluster is pegged to the CDP Environment. Each CDE Virtual Cluster i
 These are the most important components in the CDE Service:
 
 ##### CDP Environment
-A logical subset of your cloud provider account including a specific virtual network. CDP Environments can be in AWS, Azure, RedHat OCP and Cloudera ECS. For more information, see [CDP Environments](https://docs.cloudera.com/management-console/cloud/overview/topics/mc-core-concepts.html). Practically speaking, an environment is equivalent to a Data Lake as each environment is automatically associated with its own SDX services for Security, Governance and Lineage.
+A logical subset of your cloud provider account including a specific virtual network. CDP Environments can be in AWS, Azure, RedHat OCP and Cloudera ECS. For more information, see https://docs.cloudera.com/management-console/cloud/overview/topics/mc-core-concepts.html[CDP Environments]. Practically speaking, an environment is equivalent to a Data Lake as each environment is automatically associated with its own SDX services for Security, Governance and Lineage.
 
 ##### CDE Service
 The long-running Kubernetes cluster and services that manage the virtual clusters. The CDE service must be enabled on an environment before you can create any virtual clusters.
@@ -97,7 +98,7 @@ Open the Configuration tab. Notice that CPU and Memory autoscale ranges, Spark v
 
 image:/img/cde_lp_3.png[] +
 
-To learn more about CDE Architecture please visit [Creating and Managing Virtual Clusters](https://docs.cloudera.com/data-engineering/cloud/manage-clusters/topics/cde-create-cluster.html) and [Recommendations for Scaling CDE Deployments](https://docs.cloudera.com/data-engineering/cloud/deployment-architecture/topics/cde-general-scaling.html)
+To learn more about CDE Architecture please visit https://docs.cloudera.com/data-engineering/cloud/manage-clusters/topics/cde-create-cluster.html[Creating and Managing Virtual Clusters] and https://docs.cloudera.com/data-engineering/cloud/deployment-architecture/topics/cde-general-scaling.html[Recommendations for Scaling CDE Deployments]
 
 >**Note**  
 >A CDE Service defines compute instance types, instance autoscale ranges and the associated CDP Data Lake. The Data and Users associated with the Service are constrained by SDX and the CDP Environment settings.
@@ -109,7 +110,7 @@ To learn more about CDE Architecture please visit [Creating and Managing Virtual
 > This flexible architecture allows you to isolate your workloads and limit access within different autoscaling compute clusters while predefining cost management guardrails at an aggregate level. For example, you can define Services at an organization level and Virtual Clusters within them as DEV, QA, PROD, etc.
 
 >**Note**  
->CDE takes advantage of YuniKorn resource scheduling and sorting policies, such as gang scheduling and bin packing, to optimize resource utilization and improve cost efficiency. For more information on gang scheduling, see the Cloudera blog post [Spark on Kubernetes – Gang Scheduling with YuniKorn](https://blog.cloudera.com/spark-on-kubernetes-gang-scheduling-with-yunikorn/).
+>CDE takes advantage of YuniKorn resource scheduling and sorting policies, such as gang scheduling and bin packing, to optimize resource utilization and improve cost efficiency. For more information on gang scheduling, see the Cloudera blog post https://blog.cloudera.com/spark-on-kubernetes-gang-scheduling-with-yunikorn/[Spark on Kubernetes – Gang Scheduling with YuniKorn].
 
 >**Note**  
 >CDE Spark Job auto-scaling is controlled by Apache Spark dynamic allocation. Dynamic allocation scales job executors up and down as needed for running jobs. This can provide large performance benefits by allocating as many resources as needed by the running job, and by returning resources when they are not needed so that concurrent jobs can potentially run faster.
@@ -183,7 +184,7 @@ image:/img/cde_res_7.png[] +
 
 image:/img/cde_res_8.png[] +
 
-To learn more about CDE Resources please visit [Using CDE Resources](https://docs.cloudera.com/data-engineering/cloud/use-resources/topics/cde-python-virtual-env.html) in the CDE Documentation.
+To learn more about CDE Resources please visit https://docs.cloudera.com/data-engineering/cloud/use-resources/topics/cde-python-virtual-env.html[Using CDE Resources] in the CDE Documentation.
 
 #### Creating CDE Spark Jobs
 
@@ -262,9 +263,9 @@ Job Resource(s): cde_hol_files
 >**Note**  
 >Job 04_Sales_Report uses the Quinn Python library. The methods are implemented in utils.py which is loaded via the File Resource.   
 
-To learn more about Iceberg in CDE please visit [Using Apache Iceberg in Cloudera Data Engineering](https://docs.cloudera.com/data-engineering/cloud/manage-jobs/topics/cde-using-iceberg.html).
+To learn more about Iceberg in CDE please visit https://docs.cloudera.com/data-engineering/cloud/manage-jobs/topics/cde-using-iceberg.html[Using Apache Iceberg in Cloudera Data Engineering].
 
-To learn more about CDE Jobs please visit [Creating and Managing CDE Jobs](https://docs.cloudera.com/data-engineering/cloud/manage-jobs/topics/cde-create-job.html) in the CDE Documentation.
+To learn more about CDE Jobs please visit https://docs.cloudera.com/data-engineering/cloud/manage-jobs/topics/cde-create-job.html[Creating and Managing CDE Jobs] in the CDE Documentation.
 
 
 ## Part 2: Orchestrating Pipelines with Airflow
@@ -279,9 +280,9 @@ In Airflow, a DAG (Directed Acyclic Graph) is defined in a Python script that re
 
 For example, for a simple DAG consisting of three tasks: A, B, and C. The DAG can specify that A has to run successfully before B can run, but C can run anytime. Also that task A times out after 5 minutes, and B can be restarted up to 5 times in case it fails. The DAG might also specify that the workflow runs every night at 10pm, but should not start until a certain date.
 
-For more information about Airflow DAGs, see Apache Airflow documentation [here](https://airflow.apache.org/docs/apache-airflow/stable/concepts/dags.html). For an example DAG in CDE, see CDE Airflow DAG documentation [here](https://docs.cloudera.com/data-engineering/cloud/orchestrate-workflows/topics/cde-airflow-editor.html).
+For more information about Airflow DAGs, see Apache Airflow documentation https://airflow.apache.org/docs/apache-airflow/stable/concepts/dags.html[here]. For an example DAG in CDE, see CDE Airflow DAG documentation https://docs.cloudera.com/data-engineering/cloud/orchestrate-workflows/topics/cde-airflow-editor.html[here].
 
-The Airflow UI makes it easy to monitor and troubleshoot your data pipelines. For a complete overview of the Airflow UI, see  Apache Airflow UI documentation [here](https://airflow.apache.org/docs/apache-airflow/stable/ui.html).
+The Airflow UI makes it easy to monitor and troubleshoot your data pipelines. For a complete overview of the Airflow UI, see  Apache Airflow UI documentation https://airflow.apache.org/docs/apache-airflow/stable/ui.html[here].
 
 ##### Executing Airflow Basic DAG
 
@@ -380,12 +381,12 @@ Finally, reupload the script to your CDE Files Resource. Create a new CDE Job of
 >The SimpleHttpOperator Operator can be used to interact with 3rd party systems and exchange data to and from a CDE Airflow Job run. For example you could trigger the execution of jobs outside CDP or execute CDE Airflow DAG logic based on inputs from 3rd party systems.
 
 >**Note**  
->You can use CDE Airflow to orchestrate SQL queries in CDW, the Cloudera Data Warehouse Data Service, with the Cloudera-supported  CDWOperator. If you want to learn more, please go to [Bonus Lab 1: Using CDE Airflow with CDW](https://github.com/pdefusco/CDE_Tour_ACE_HOL/blob/main/step_by_step_guides/english.md#bonus-lab-1-using-cde-airflow-with-cdw).
+>You can use CDE Airflow to orchestrate SQL queries in CDW, the Cloudera Data Warehouse Data Service, with the Cloudera-supported  CDWOperator. If you want to learn more, please go to https://github.com/pdefusco/CDE_Tour_ACE_HOL/blob/main/step_by_step_guides/english.md#bonus-lab-1-using-cde-airflow-with-cdw[Bonus Lab 1: Using CDE Airflow with CDW].
 
 >**Note**  
->Additionally, other operators including Python, HTTP, and Bash are available in CDE. If you want to learn more about Airflow in CDE, please reference [Using CDE Airflow](https://github.com/pdefusco/Using_CDE_Airflow).
+>Additionally, other operators including Python, HTTP, and Bash are available in CDE. If you want to learn more about Airflow in CDE, please reference https://github.com/pdefusco/Using_CDE_Airflow[Using CDE Airflow].
 
-To learn more about CDE Airflow please visit [Orchestrating Workflows and Pipelines](https://docs.cloudera.com/data-engineering/cloud/orchestrate-workflows/topics/cde-airflow-editor.html) in the CDE Documentation.
+To learn more about CDE Airflow please visit https://docs.cloudera.com/data-engineering/cloud/orchestrate-workflows/topics/cde-airflow-editor.html[Orchestrating Workflows and Pipelines] in the CDE Documentation.
 
 
 ## Part 3: Using the CDE CLI
@@ -396,11 +397,11 @@ The majority of CDE Production use cases rely on the CDE API and CLI. With them,
 
 In this part of the workshop you will gain familiarity with the CDE CLI by rerunning the same jobs and interacting with the service remotely.
 
-You can use the CDE CLI or API to execute Spark and Airflow jobs remotely rather than via the CDE UI as shown up to this point. In general, the CDE CLI is recommended over the UI when running spark submits from a local machine. The API is instead recommended when integrating CDE Spark Jobs or Airflow Jobs (or both) with 3rd party orchestration systems. For example you can use GitLab CI to build CDE Pipelines across multiple Virtual Clusters. For a detailed example, please reference [GitLab2CDE](https://github.com/pdefusco/Gitlab2CDE).
+You can use the CDE CLI or API to execute Spark and Airflow jobs remotely rather than via the CDE UI as shown up to this point. In general, the CDE CLI is recommended over the UI when running spark submits from a local machine. The API is instead recommended when integrating CDE Spark Jobs or Airflow Jobs (or both) with 3rd party orchestration systems. For example you can use GitLab CI to build CDE Pipelines across multiple Virtual Clusters. For a detailed example, please reference https://github.com/pdefusco/Gitlab2CDE[GitLab2CDE].
 
 ##### Manual CLI Installation
 
-You can download the CDE CLI to your local machine following the instructions provided in the [official documentation](https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html).
+You can download the CDE CLI to your local machine following the instructions provided in the https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html[official documentation].
 
 ##### Automated CLI Installation
 
@@ -510,7 +511,7 @@ cde run --help
 cde resource --help
 ```
 
-To learn more about the CDE CLI please visit [Using the Cloudera Data Engineering command line interface](https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html) in the CDE Documentation.
+To learn more about the CDE CLI please visit https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html[Using the Cloudera Data Engineering command line interface] in the CDE Documentation.
 
 
 ## Part 4: Using the Spark Migration Tool
@@ -525,7 +526,7 @@ The CDE CLI provides a similar although not identical way of running "spark-subm
 >The Spark Submit Migration tool requires having the CDE CLI installed on your machine. Please ensure you have completed the installation steps in Part 3.
 
 >**⚠ Warning**  
->This tutorial utilizes Docker to streamline the installation process of the Spark Submit Migration tool. If you don't have Docker installed on your machine you will have to go through [this tutorial by Vish Rajagopalan](https://github.com/SuperEllipse/cde-spark-submit-migration) instead.
+>This tutorial utilizes Docker to streamline the installation process of the Spark Submit Migration tool. If you don't have Docker installed on your machine you will have to go through https://github.com/SuperEllipse/cde-spark-submit-migration[this tutorial by Vish Rajagopalan] instead.
 
 Navigate to the CDP Management Console and download your user credentials file. The credentials file includes a CDP Access Key ID and a CDP Private Key.
 
@@ -728,6 +729,6 @@ image:/img/bonus2_step07.png[] +
 
 ### Conclusion
 
-Congratulations for making it to the end of this tutorial! We hope you enjoyed using CDE first hand. We recommend visiting the [Next Steps Section](https://github.com/pdefusco/CDE_Tour_ACE_HOL#next-steps) to continue your journey with CDE.
+Congratulations for making it to the end of this tutorial! We hope you enjoyed using CDE first hand. We recommend visiting the https://github.com/pdefusco/CDE_Tour_ACE_HOL#next-steps[Next Steps Section] to continue your journey with CDE.
 
 image:/img/cde_thankyou.png[] +
