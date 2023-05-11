@@ -82,7 +82,7 @@ Scroll down and open the Configurations tab. Notice that this is where Instance 
 
 image:/img/cde_service_3a.png[] +
 
-To learn more about other important service configurations please visit [Enabling a CDE Service](https://docs.cloudera.com/data-engineering/cloud/enable-data-engineering/topics/cde-enable-data-engineering.html) in the CDE Documentation.
+To learn more about other important service configurations please visit https://docs.cloudera.com/data-engineering/cloud/enable-data-engineering/topics/cde-enable-data-engineering.html[Enabling a CDE Service] in the CDE Documentation.
 
 Navigate back to the Administration page and open a Virtual Cluster's Cluster Details page.
 
