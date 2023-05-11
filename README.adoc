@@ -1,4 +1,6 @@
-# Step by Step Guide - ENG
+# Cloudera Data Engineering -  Workshop Student Guide
+
+image:/img/AMERPartnerWSBanner.png[] +
 
 ## Requirements
 
