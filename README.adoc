@@ -162,7 +162,7 @@ Pick your Spark 3 / Iceberg-enabled CDE Virtual Cluster and name your Resource a
 
 image:/img/cde_res_2.png[] +
 
-Upload all files from the "cde_ace_hol/cde_spark_jobs" folder. Then, navigate back to the Resources tab, reopen the resource and upload the two Airflow DAGs located in the "cde_ace_hol/cde_airflow_jobs" folders. Finally, reopen the resource and upload the "utils.py" file contained in the "cde_ace_hol/resources_files" folder.
+Upload all files from the "cde-workshop/cde_spark_jobs" folder. Then, navigate back to the Resources tab, reopen the resource and upload the two Airflow DAGs located in the "cde-workshop/cde_airflow_jobs" folders. Finally, reopen the resource and upload the "utils.py" and "parameters.conf" file contained in the "cde-workshop/resources_files" folder.
 
 When you are done, ensure that the following files are located in your File Resource:
 
@@ -187,11 +187,11 @@ To create a Python Resource, navigate back to the CDE Home Page and click on "Cr
 
 image:/img/cde_res_4.png[] +
 
-Ensure to select the same CDE Virtual Cluster. Name the Python CDE Resource and leave the pipy mirror field blank.
+Ensure to select the same CDE Virtual Cluster. Name the Python CDE Resource (<user>-python)and leave the pipy mirror field blank. Click the *Create* button.
 
 image:/img/cde_res_5.png[] +
 
-Upload the "requirements.txt" file provided in the "cde_ace_hol/resources_files" folder.
+Upload the "requirements.txt" file provided in the "cde-workshop/resources_files" folder.
 
 image:/img/cde_res_6.png[] +
 
