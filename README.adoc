@@ -107,7 +107,7 @@ image:/img/cde_lp_2.png[] +
 
 This view includes other important cluster management information. From here you can:
 
-* Download the CDE CLI binaries. The CLI is recommended to submit jobs and interact with CDE. It is covered in Part 3 of this guide.
+* Download the CDE CLI binaries. The CLI is recommended to submit jobs and interact with CDE. It is covered in Lab 3 of this guide.
 * Visit the API Docs to learn the CDE API and build sample requests on the Swagger page.
 * Access the Airflow UI to monitor your Airflow Jobs, set up custom connections, variables, and more.  
 
@@ -133,7 +133,7 @@ CDE takes advantage of YuniKorn resource scheduling and sorting policies, such a
 CDE Spark Job auto-scaling is controlled by Apache Spark dynamic allocation. Dynamic allocation scales job executors up and down as needed for running jobs. This can provide large performance benefits by allocating as many resources as needed by the running job, and by returning resources when they are not needed so that concurrent jobs can potentially run faster.
 
 
-## Part 1: Implement a Spark Pipeline
+## Lab 1: Implement a Spark Pipeline
 
 #### Summary
 
@@ -285,7 +285,7 @@ To learn more about Iceberg in CDE please visit https://docs.cloudera.com/data-e
 To learn more about CDE Jobs please visit https://docs.cloudera.com/data-engineering/cloud/manage-jobs/topics/cde-create-job.html[Creating and Managing CDE Jobs] in the CDE Documentation.
 
 
-## Part 2: Orchestrating Pipelines with Airflow
+## Lab 2: Orchestrating Pipelines with Airflow
 
 #### Summary
 
@@ -406,7 +406,7 @@ Additionally, other operators including Python, HTTP, and Bash are available in 
 To learn more about CDE Airflow please visit https://docs.cloudera.com/data-engineering/cloud/orchestrate-workflows/topics/cde-airflow-editor.html[Orchestrating Workflows and Pipelines] in the CDE Documentation.
 
 
-## Part 3: Using the CDE CLI
+## Lab 3: Using the CDE CLI
 
 #### Summary
 
@@ -531,7 +531,7 @@ cde resource --help
 To learn more about the CDE CLI please visit https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html[Using the Cloudera Data Engineering command line interface] in the CDE Documentation.
 
 
-## Part 4: Using the Spark Migration Tool
+## Lab 4: Using the Spark Migration Tool
 
 #### Summary
 
@@ -660,7 +660,7 @@ Click the plus sign to add a new record, and then fill in the fields:
 * Schema: default
 * Login: Enter your workload username and password.
 
-6. Click Save.
+* Click Save.
 
 image:/img/bonus1_step1.png[] +
 
