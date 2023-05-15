@@ -205,13 +205,13 @@ To learn more about CDE Resources please visit https://docs.cloudera.com/data-en
 
 #### Creating CDE Spark Jobs
 
-Next we will create four CDE Jobs of type Spark using scripts "01_Pre_Setup.py", "02_EnrichData_ETL.py", "03_Spark2Iceberg.py" and "04_Sales_Report.py" located in the "cde_ace_hol/cde_spark_jobs" folder.
+Next we will create four CDE Jobs of type Spark using scripts "01_Pre_Setup.py", "02_EnrichData_ETL.py", "03_Spark2Iceberg.py" and "04_Sales_Report.py" located in the "cde-workshop/cde_spark_jobs" folder.
 
 Navigate back to the CDE Home Page. Click on "Create New" in the "Jobs" -> "Spark" section.
 
 image:/img/cde_jobs_1.png[] +
 
-Select your CDE Virtual Cluster and assign "O1_Setup" as the Job Name.
+Select your CDE Virtual Cluster and assign "<cdeuser>_O1_Setup" as the Job Name.
 
 image:/img/cde_jobs_2.png[] +
 
@@ -221,15 +221,16 @@ image:/img/cde_jobs_3.png[] +
 
 image:/img/cde_jobs_4.png[] +
 
-Scroll down again to the "Resources" section and notice that your File Resource has been mapped to the Job by default. This allows the PySpark script to load modules in the same Resource such as the ones contained in the "utils.py" file.
-
-Scroll to the bottom and click on the "Create and Run" blue icon.
+Scroll down again to the "Resources" section in "Advance Options" and notice that your File Resource has been mapped to the Job by default. This allows the PySpark script to load modules in the same Resource such as the ones contained in the "utils.py" file.
 
 image:/img/cde_jobs_5.png[] +
 
-You will be automatically taken to the Jobs tab where the Job will now be listed at the top. Open the Job Runs tab on the left pane and validate that the CDE Spark Job is executing.
+Scroll to the bottom and click on the "Create and Run" blue icon.
 
 image:/img/cde_jobs_6.png[] +
+
+You will be automatically taken to the Jobs tab where the Job will now be listed at the top. Open the Job Runs tab on the left pane and validate that the CDE Spark Job is executing.
+
 
 image:/img/cde_jobs_7.png[] +
 
