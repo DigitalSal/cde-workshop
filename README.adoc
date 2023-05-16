@@ -399,6 +399,7 @@ As in the previous example, first create (but don't run) three CDE Spark Jobs us
 **⚠ Update DAG** +
 Then, open "07-Airflow-Logic-DAG.py" in your editor and update your username at line 50. Make sure that the job names at lines 54 - 56 reflect the three CDE Spark Job names as you entered them in the CDE Job UI.
 
+**⚠ Create Airflow Job** +
 Finally, reupload the script to your CDE Files Resource. Create a new CDE Job of type Airflow and select the script from your CDE Resource.
 
 **Note** +
