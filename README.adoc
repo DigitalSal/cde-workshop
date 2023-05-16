@@ -26,6 +26,7 @@ In order to execute the Hands On Labs you need:
 * Familiarity with Python and PySpark is highly recommended.
 * The files contained in the data folder should be manually loaded in the Storage Location of choice. If you are attending a CDE Workshop, this will already have been done for you. Please validate this with your Cloudera Workshop Lead.  
 * Bonus Lab 1 requires a Hive CDW Virtual Warehouse. This lab is optional.
+* https://github.com/DigitalSal/cde-workshop/blob/main/WorkloadPassword.adoc[Set Workload Password]
 
 ## Project Setup
 
