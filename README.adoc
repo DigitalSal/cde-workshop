@@ -548,7 +548,7 @@ The CDE CLI provides a similar although not identical way of running "spark-subm
 #### Step By Step Instructions
 
 **⚠ Warning** +
-The Spark Submit Migration tool requires having the CDE CLI installed on your machine. Please ensure you have completed the installation steps in Part 3.
+The Spark Submit Migration tool requires having the CDE CLI installed on your machine. Please ensure you have completed the installation steps in Lab 3.
 
 **⚠ Warning** +
 This tutorial utilizes Docker to streamline the installation process of the Spark Submit Migration tool. If you don't have Docker installed on your machine you will have to go through https://github.com/SuperEllipse/cde-spark-submit-migration[this tutorial by Vish Rajagopalan] instead.
