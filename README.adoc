@@ -333,7 +333,7 @@ Upload the updated script to your CDE Files Resource. Then navigate back to the 
 
 image:/img/cde_airflow_1.png[] +
 
-As before, select your Virtual Cluster and Job name. Then create and execute.
+As before, select your Virtual Cluster and enter Job name <cdeuser>_05_Airflow_Basic_DAG. Then create and execute.
 
 image:/img/cde_airflow_2.png[] +
 
