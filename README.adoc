@@ -430,6 +430,8 @@ You can download the CDE CLI to your local machine following the instructions pr
 
 **For Mac users:** 
 
+https://github.com/DigitalSal/cde-workshop/blob/main/CDE%20CLI%20-%20For%20Mac.pdf[CDE CLI for MAC]
+
 * Make sure that the cde file is executable by running the below command. 
 ```
 chmod +x /path/to/cde
