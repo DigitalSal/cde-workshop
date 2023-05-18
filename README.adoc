@@ -170,7 +170,7 @@ image:/img/cde_res_2.png[] +
 *Step 4.* Navigate back to the Resources tab, reopen the resource and upload the two Airflow DAGs located in the "cde-workshop/cde_airflow_jobs" folders. +
 *Step 5.* Finally, reopen the resource and upload the "utils.py" and "parameters.conf" file contained in the "cde-workshop/resources_files" folder. +
 
-When you are done, ensure that the following files are located in your File Resource:
+*Step 6.* Ensure that the following files are located in your File Resource:
 
 ```
 01_Pre_Setup.py
@@ -189,15 +189,18 @@ parameters.conf
 utils.py
 ```
 
-To create a Python Resource, navigate back to the CDE Home Page and click on "Create New" in the "Resources" -> "Python" section.
+==== 1.2 Creating a Python Resource
+*Step 1.* To create a Python Resource, navigate back to the CDE Home Page and click on "Create New" in the "Resources" -> "Python" section.
 
 image:/img/cde_res_4.png[] +
 
-Ensure to select the same CDE Virtual Cluster. Name the Python CDE Resource (<user>-python)and leave the pipy mirror field blank. Click the *Create* button.
+*Step 2.* Ensure to select the same CDE Virtual Cluster. +
+*Step 3.* Name the Python CDE Resource (<user>-python)and leave the pipy mirror field blank. +
+*Step 4.* Click the *Create* button.
 
 image:/img/cde_res_5.png[] +
 
-Upload the "requirements.txt" file provided in the "cde-workshop/resources_files" folder.
+*Step 5.* Upload the "requirements.txt" file provided in the "cde-workshop/resources_files" folder.
 
 image:/img/cde_res_6.png[] +
 
