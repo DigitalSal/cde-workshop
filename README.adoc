@@ -411,7 +411,7 @@ As in the previous example, first create (but don't run) three CDE Spark Jobs us
 *Step 8.*  Update DAG +
 Then, open "07-Airflow-Logic-DAG.py" in your editor and update your username at line 50. Make sure that the job names at lines 54 - 56 reflect the three CDE Spark Job names as you entered them in the CDE Job UI.
 
-*Step 6.* Create Airflow Job +
+*Step 9.* Create Airflow Job +
 Finally, reupload the script to your CDE Files Resource. Create a new CDE Job of type Airflow and select the script from your CDE Resource.
 
 **Note** +
@@ -426,9 +426,9 @@ Additionally, other operators including Python, HTTP, and Bash are available in 
 To learn more about CDE Airflow please visit https://docs.cloudera.com/data-engineering/cloud/orchestrate-workflows/topics/cde-airflow-editor.html[Orchestrating Workflows and Pipelines] in the CDE Documentation.
 
 
-## Lab 3: Using the CDE CLI
+== Lab 3: Using the CDE CLI
 
-#### Summary
+=== 3.1 Summary
 
 The majority of CDE Production use cases rely on the CDE API and CLI. With them, you can easily interact with CDE from a local IDE and build integrations with external 3rd party systems. For example, you can implement multi-CDE cluster workflows with GitLabCI or Python.  
 
@@ -436,7 +436,7 @@ In this part of the workshop you will gain familiarity with the CDE CLI by rerun
 
 You can use the CDE CLI or API to execute Spark and Airflow jobs remotely rather than via the CDE UI as shown up to this point. In general, the CDE CLI is recommended over the UI when running spark submits from a local machine. The API is instead recommended when integrating CDE Spark Jobs or Airflow Jobs (or both) with 3rd party orchestration systems. For example you can use GitLab CI to build CDE Pipelines across multiple Virtual Clusters. For a detailed example, please reference https://github.com/pdefusco/Gitlab2CDE[GitLab2CDE].
 
-##### Manual CLI Installation
+=== 3.2 Manual CLI Installation
 
 You can download the CDE CLI to your local machine following the instructions provided in the https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html[official documentation].
 
