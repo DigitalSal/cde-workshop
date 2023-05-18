@@ -296,13 +296,13 @@ To learn more about Iceberg in CDE please visit https://docs.cloudera.com/data-e
 To learn more about CDE Jobs please visit https://docs.cloudera.com/data-engineering/cloud/manage-jobs/topics/cde-create-job.html[Creating and Managing CDE Jobs] in the CDE Documentation.
 
 
-## Lab 2: Orchestrating Pipelines with Airflow
+== Lab 2: Orchestrating Pipelines with Airflow
 
-#### Summary
+=== 2.1 Summary
 
 In this section you will build three Airflow jobs to schedule, orchestrate and monitor the execution of Spark Jobs and more.
 
-##### Airflow Concepts
+=== 2.2 Airflow Concepts
 
 In Airflow, a DAG (Directed Acyclic Graph) is defined in a Python script that represents the DAGs structure (tasks and their dependencies) as code.
 
@@ -312,9 +312,9 @@ For more information about Airflow DAGs, see Apache Airflow documentation https:
 
 The Airflow UI makes it easy to monitor and troubleshoot your data pipelines. For a complete overview of the Airflow UI, see  Apache Airflow UI documentation https://airflow.apache.org/docs/apache-airflow/stable/ui.html[here].
 
-##### Executing Airflow Basic DAG
+=== 2.3 Executing Airflow Basic DAG
 
-Open "05-Airflow-Basic-DAG.py", familiarize yourself with the code, and notice the following:
+*Step 1.* Open "05-Airflow-Basic-DAG.py", familiarize yourself with the code, and notice the following:
 
 * Airflow allows you to break up complex Spark Pipelines in different steps, isolating issues and optionally providing retry options.
 * The CDEJobRunOperator, BashOperator and PythonOperator are imported at lines 44-46. These allow you to execute a CDE Spark Job, Bash, and Python Code respectively all within the same workflow.
@@ -322,41 +322,41 @@ Open "05-Airflow-Basic-DAG.py", familiarize yourself with the code, and notice t
 * Step 2 and 3 are CDEJobRunOperator instances and are used to execute CDE Spark Jobs. At lines 77 and 83 the CDE Spark Job names have to be declared as they appear in the CDE Jobs UI. In this case, the fields are referencing two variables at lines 52 and 53.
 * Finally, task dependencies are specified at line 109. Steps 1 - 5 are executed in sequence, one when the other completes. If any of them fails, the remaining CDE Jobs will not be triggered.
 
-**⚠ Create CDE Spark Jobs** +
+*Step 2.* Create CDE Spark Jobs +
 Create two CDE Spark Jobs using scripts "05-A-ETL.py" and "05-B-Reports.py" but do not run them.
 
-**⚠ Update DAG** +
+*Step 2.* Update DAG +
 Then, open "05-Airflow-Basic-DAG.py" and enter the names of the two CDE Spark Jobs as they appear in the CDE Jobs UI at lines 52 and 53.
 
-**⚠ Update DAG** +
+*Step 3.* Update DAG +
 In addition, notice that credentials stored in parameters.conf are not available to CDE Airflow jobs. Therefore, update the "username" variable at line 48 in "05-Airflow-Basic-DAG.py".
 
 The "username" variable is read at line 64 to create a dag_name variable which in turn will be used at line 67 to assign a unique DAG name when instantiating the DAG object.
 
-**⚠ Update DAG** +
+*Step 4.*  Update DAG +
 Finally, modify lines 60 and 61 to assign a start and end date that takes place in the future.
 
-**⚠ Warning** +
+*Step 5.* Provide unique DAG name +
 CDE requires a unique DAG name for each CDE Airflow Job or will otherwise return an error upon job creation.
 
 **⚠ Warning** +
 If you don't edit the start and end date, the CDE Airflow Job might fail. The Start Date parameter must reflect a date in the past while the End Date must be in the future. If you are getting two identical Airflow Job runs you have set both dates in the past.  
 
-Upload the updated script to your CDE Files Resource. Then navigate back to the CDE Home Page and create a new CDE Job of type Airflow.
+*Step 6.* Upload the updated script to your CDE Files Resource. Then navigate back to the CDE Home Page and create a new CDE Job of type Airflow.
 
 image:/img/cde_airflow_1.png[] +
 
-As before, select your Virtual Cluster and enter Job name <cdeuser>_05_Airflow_Basic_DAG. Then create and execute.
+*Step 7.* As before, select your Virtual Cluster and enter Job name <cdeuser>_05_Airflow_Basic_DAG. Then create and execute.
 
 image:/img/cde_airflow_2.png[] +
 
 image:/img/cde_airflow_3.png[] +
 
-Navigate to the Job Runs tab and notice that the Airflow DAG is running. While in progress, navigate back to the CDE Home Page, scroll down to the Virtual Clusters section and open the Virtual Cluster Details. Then, open the Airflow UI.
+*Step 8.* Navigate to the Job Runs tab and notice that the Airflow DAG is running. While in progress, navigate back to the CDE Home Page, scroll down to the Virtual Clusters section and open the Virtual Cluster Details. Then, open the Airflow UI.
 
 image:/img/cde_airflow_4.png[] +
 
-Familiarize yourself with the Airflow UI. Then, open the Dag Runs page and validate the CDE Airflow Job's execution.
+*Step 9.* Familiarize yourself with the Airflow UI. Then, open the Dag Runs page and validate the CDE Airflow Job's execution.
 
 image:/img/cde_airflow_5.png[] +
 
