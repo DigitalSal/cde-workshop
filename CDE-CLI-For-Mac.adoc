@@ -1,1 +1,60 @@
+* Make sure that the cde file is executable by running the below command. 
+```
+chmod +x /path/to/cde
+```
+* Open the CDE CLI. You might get the below error. 
+* If "cde" cannot be opened - Go to System Preferences → Security and Privacy and add this app in the trust center. 
+* Once done, add the path to the cli in the PATH variable. 
+* Run the below command in the terminal to update the path variable. 
+```
+	export PATH=$PATH:”<path-to-cde>”
+```
+* Example : If the file is situated in the path
+```
+/home/user/applications/cde
+```
+* Then the export command will look something like this
+```
+export PATH=$PATH:/home/user/applications/
+```
+**Note : Once the terminal is closed, the  step to add the path to the PATH variable needs to be performed again.**
+
+* To validate the installation, run the below command from the terminal. 
+```
+cde --help
+```
+* If you get a result, then the installation is completed successfully. We now need to configure the CLI to connect to our virtual cluster. 
+* For configuring the CDE CLI, we create a new file and add the cluster details and use it as an environment variable for connecting to the CDE virtual cluster. 
+* Create a file as config.yaml and add the following details. 
+* Here, user is the username you have been assigned. DO NOT INCLUDE “@workshop.com” as part of user (example: user: wuser01)
+* Use the Jobs API URL for the virtual cluster.
+```
+touch config.yaml
+```
+```
+vi config.yaml
+```
+```
+user: <CDP_user>
+vcluster-endpoint: <CDE_virtual_cluster_endpoint>
+```
+
+* Open terminal and run the below command to create an environment variable. 
+```
+export CDE_CONFIG=/path/to/config.yaml
+```
+* Run the below command to verify whether the above step is completed successfully. You should see the path-to-config.yaml as the output. 
+```
+echo $CDE_CONFIG
+```
+* Run the below command to validate the configuration. Upon running it, you will be asked to provide the API password. Please enter the password as mentioned in the excel sheet. 
+```
+cde job list
+```
+* Once you enter the password, you should see all the jobs present in the virtual cluster. 
+If you get any  error related to the certificate, please add the flag to skip tls verification. 
+```
+cde job list --tls-insecure
+```
+* This marks the end of installation and configuration of CDE CLI. Now, head over to the next lab to trigger the jobs from CLI. 
 
