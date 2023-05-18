@@ -362,27 +362,29 @@ image:/img/cde_airflow_5.png[] +
 
 image:/img/cde_airflow_6.png[] +
 
-##### Executing Airflow Logic Dag
+=== 2.4 Executing Airflow Logic Dag
 
 Airflow's capabilities include a wide variety of operators, the ability to store temporary context values, connecting to 3rd party systems and overall the ability to implement more advanced orchestration use cases.
 
 Using "07-Airflow-Logic-DAG.py" you will create a new CDE Airflow Job with other popular Operators such as the SimpleHttpOperator Operator to send/receive API requests.
 
-In order to use it, first you have to set up a Connection to the endpoint referenced at line 110 in the DAG. Navigate back to the CDE Administration tab, open your Virtual Cluster's "Cluster Details" and then click on the "Airflow" icon to reach the Airflow UI.
+*Step 1.* In order to use it, first you have to set up a Connection to the endpoint referenced at line 110 in the DAG. Navigate back to the CDE Administration tab. +
+*Step 2.* Open your Virtual Cluster's "Cluster Details" and then click on the "Airflow" icon to reach the Airflow UI.
 
 image:/img/airflow_connection_0.png[] +
 
 image:/img/airflow_connection_1.png[] +
 
-Open Airflow Connections under the Admin dropdown as shown below.
+*Step 3.* Open Airflow Connections under the Admin dropdown as shown below.
 
 image:/img/airflow_connection_2.png[] +
 
-Airflow Connections allow you to predefine connection configurations so that they can be referenced within a DAG for various purposes. In our case, we will create a new connection to access the "Random Joke API" and in particular the "Programming" endpoint.
+Airflow Connections allow you to predefine connection configurations so that they can be referenced within a DAG for various purposes. +
+*Step 4.* In our case, we will create a new connection to access the "Random Joke API" and in particular the "Programming" endpoint.
 
 image:/img/airflow_connection_3.png[] +
 
-Fill out the following fields as shown below and save.
+*Step 5.* Fill out the following fields as shown below and save.
 
 ```
 Connection Id: random_joke_connection
@@ -392,7 +394,7 @@ Host: https://official-joke-api.appspot.com/
 
 image:/img/airflow_connection_4.png[] +
 
-Now open "07-Airflow-Logic-DAG.py" and familiarize yourself with the code. Some of the most notable aspects of this DAG include:
+*Step 6.* Now open "07-Airflow-Logic-DAG.py" and familiarize yourself with the code. Some of the most notable aspects of this DAG include:
 
 * Review line 127. Task Execution no longer follows a linear sequence. Step 3 only executes when both Step 1 and 2 have completed successfully.
 * At lines 75-77, the DummyOperator Operator is used as a placeholder and starting place for Task Execution.
