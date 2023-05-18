@@ -166,9 +166,9 @@ image:/img/cde_res_1.png[] +
 
 image:/img/cde_res_2.png[] +
 
-*Step 3.* Upload all files from the "cde-workshop/cde_spark_jobs" folder.+ 
+*Step 3.* Upload all files from the "cde-workshop/cde_spark_jobs" folder. + 
 *Step 4.* Navigate back to the Resources tab, reopen the resource and upload the two Airflow DAGs located in the "cde-workshop/cde_airflow_jobs" folders. +
-*Step 5.* Finally, reopen the resource and upload the "utils.py" and "parameters.conf" file contained in the "cde-workshop/resources_files" folder.+
+*Step 5.* Finally, reopen the resource and upload the "utils.py" and "parameters.conf" file contained in the "cde-workshop/resources_files" folder. +
 
 When you are done, ensure that the following files are located in your File Resource:
 
