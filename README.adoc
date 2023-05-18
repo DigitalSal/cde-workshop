@@ -115,7 +115,7 @@ This view includes other important cluster management information. From here you
 * Visit the API Docs to learn the CDE API and build sample requests on the Swagger page.
 * Access the Airflow UI to monitor your Airflow Jobs, set up custom connections, variables, and more.  
 
-Open the Configuration tab. Notice that CPU and Memory autoscale ranges, Spark version, and Iceberg options are set here.
+*Step 6.* Open the Configuration tab. Notice that CPU and Memory autoscale ranges, Spark version, and Iceberg options are set here.
 
 image:/img/cde_lp_3.png[] +
 
