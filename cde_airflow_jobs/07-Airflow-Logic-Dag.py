@@ -47,13 +47,13 @@ from dateutil import parser
 from airflow import DAG
 import pendulum
 
-username = "pdefusco_020723"
+username = "cdeuserXX"
 
 print("Running as Username: ", username)
 
-cde_job_name_07_A = '07_A_pyspark_LEFT'
-cde_job_name_07_B = '07_B_pyspark_RIGHT'
-cde_job_name_07_C = '07_C_pyspark_JOIN'
+cde_job_name_07_A = 'cdeuserXX_07_A_pyspark_LEFT'
+cde_job_name_07_B = 'cdeuserXX_07_B_pyspark_RIGHT'
+cde_job_name_07_C = 'cdeuserXX_07_C_pyspark_JOIN'
 
 default_args = {
         'owner': username,
