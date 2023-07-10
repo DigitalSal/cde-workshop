@@ -45,12 +45,12 @@ from cloudera.cdp.airflow.operators.cde_operator import CDEJobRunOperator
 from airflow.operators.bash import BashOperator
 from airflow.operators.python_operator import PythonOperator
 
-username = "cdeuserxx"
+username = "cdeuserXX"
 
 print("Running as Username: ", username)
 
-cde_job_name_05_A = username + "-05-A-ETL" #Replace with CDE Job Name for Script 5 A
-cde_job_name_05_B = username + "-05-B-Reports"  #Replace with CDE Job Name for Script 5 B
+cde_job_name_05_A = "cdeuseXX-05-A-ETL" #Replace with CDE Job Name for Script 5 A
+cde_job_name_05_B = "cdeuserXX-05-B-Reports"  #Replace with CDE Job Name for Script 5 B
 
 #DAG instantiation
 default_args = {
