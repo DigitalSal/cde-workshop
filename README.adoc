@@ -41,7 +41,7 @@ cd ~/Documents/cde-workshop
 git clone https://github.com/DigitalSal/cde-workshop.git
 ```
 
-* Alternatively, if you don't have `git` installed on your machine, create a folder on your local computer; navigate to https://github.com/pdefusco/CDE_Tour_ACE_HOL.git[this URL] and manually download the files.
+* Alternatively, if you don't have `git` installed on your machine, create a folder on your local computer; navigate to https://github.com/DigitalSal/cde-workshop.git[this URL] and manually download the files.
 
 === Introduction to the CDE Data Service
 
