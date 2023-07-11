@@ -787,9 +787,9 @@ Finally, notice that task dependencies include both the spark and dw steps:
 spark_step >> dw_step
 ```
 
-Next, create a new Airflow CDE Job named "CDW Dag". Upload the new DAG file to the same or a new CDE resource as part of the creation process.
+Next, create a new Airflow CDE Job named "<cdeuserXX>-CDW-Dag". Upload the new DAG file to the same or a new CDE resource as part of the creation process.
 
-image:/img/bonus1_step2.png)
+image:/img/bonus1_step2.png[] +
 
 Navigate to the CDE Job Runs Page and open the run's Airflow UI. Then open the Tree View and validate that the job has succeeded.
 
