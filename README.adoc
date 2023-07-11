@@ -616,6 +616,12 @@ cde resource --help
 
 To learn more about the CDE CLI please visit https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html[Using the Cloudera Data Engineering command line interface] in the CDE Documentation.
 
+### Conclusion
+
+Congratulations for making it to the end of this tutorial! We hope you enjoyed using CDE first hand. We recommend visiting the https://github.com/pdefusco/CDE_Tour_ACE_HOL#next-steps[Next Steps Section] to continue your journey with CDE.
+
+image:/img/cde_thankyou.png[] +
+
 ## Bonus Labs
 
 ### Bonus: Using the Spark Migration Tool
@@ -831,8 +837,4 @@ image:/img/bonus2_step06.png[] +
 image:/img/bonus2_step07.png[] +
 
 
-### Conclusion
 
-Congratulations for making it to the end of this tutorial! We hope you enjoyed using CDE first hand. We recommend visiting the https://github.com/pdefusco/CDE_Tour_ACE_HOL#next-steps[Next Steps Section] to continue your journey with CDE.
-
-image:/img/cde_thankyou.png[] +
