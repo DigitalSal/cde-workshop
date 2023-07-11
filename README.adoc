@@ -616,8 +616,9 @@ cde resource --help
 
 To learn more about the CDE CLI please visit https://docs.cloudera.com/data-engineering/cloud/cli-access/topics/cde-cli.html[Using the Cloudera Data Engineering command line interface] in the CDE Documentation.
 
+## Bonus Labs
 
-## Lab 4: Using the Spark Migration Tool
+### Bonus: Using the Spark Migration Tool
 
 #### Summary
 
@@ -696,7 +697,7 @@ So far you explored the core aspects of CDE Spark, Airflow and Iceberg. The foll
 Each Bonus Lab can be run independently of another. In other words, you can run all or just a select few, and in any order that you prefer.
 
 
-### Bonus Lab 1: Using CDE Airflow with CDW
+### Bonus Lab: Using CDE Airflow with CDW
 
 You can use the CDWRunOperator to run CDW queries from a CDE Airflow DAG. This operator has been created and is fully supported by Cloudera.
 
@@ -795,7 +796,7 @@ Navigate to the CDE Job Runs Page and open the run's Airflow UI. Then open the T
 image:/img/bonus1_step3.png[] +
 
 
-### Bonus Lab 2: Using the CDE Airflow Editor to Build Airflow DAGs without Coding
+### Bonus Lab: Using the CDE Airflow Editor to Build Airflow DAGs without Coding
 
 You can use the CDE Airflow Editor to build DAGs without writing code. This is a great option if your DAG consists of a long sequence of CDE Spark or CDW Hive jobs.
 
