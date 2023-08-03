@@ -1,6 +1,6 @@
 = Cloudera Data Engineering -  Workshop Student Guide
 
-image:/img/AMERPartnerWSBanner.png[] +
+image:https://github.com/DigitalSal/cdp-ds-workshops/raw/main/images/AMERPartnerWSBanner.png[] +
 
 == Objective
 
